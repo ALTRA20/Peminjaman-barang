@@ -1,14 +1,15 @@
 <?php include '../controler/MethodsControler.php' ?>
 <?php 
+session_start();
     if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
-        header("location:/peminjaman/");
+        header("location:/peminjaman-barang/view/");
     }else{
         "";
     }
 ?>
 <?php 
 if (isset($_POST['btn-login'])) {
-    $login = $methods->login($_POST);
+    $login = $methodsControler->login($_POST);
     echo $login['message'];
 }
 
@@ -22,7 +23,7 @@ if (isset($_POST['btn-login'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-    <section class="row d-flex justify-content-center align-items-center border bg-primary" id="body" style="height:800px;"> 
+    <section class="row d-flex justify-content-center align-items-center border bg-primary" id="body" style="height:800px;">
         <form class="col-3 rounded px-4 pb-4 pt-4 bg-white" action="" method="POST">
           <h2 class="text-center">Login</h2>
           <!-- Email input -->

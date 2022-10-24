@@ -48,17 +48,17 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
 		</div>
 		<div class="col-10 ">
 			<div class="row d-flex justify-content-center align-items-center" style="height: 100%;">
-				<a href='inputNomor.php?jenis_barang=kamera' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman/src/img/Kamera.jpg'); background-size: cover; background-position: center; height:170px;">
+				<a href='inputNomor.php?jenis_barang=kamera' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman-barang/src/img/Kamera.jpg'); background-size: cover; background-position: center; height:170px;">
 					<div class="text-center" style="background:rgba(0, 0, 0, 0.7);">
 						<h4 class="text-white">Kamera</h4>
 					</div>
 				</a>
-				<a href='inputNomor.php?jenis_barang=laptop' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman/src/img/laptop.jpg'); background-size: cover; background-position: center; height:170px;">
+				<a href='inputNomor.php?jenis_barang=laptop' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman-barang/src/img/laptop.jpg'); background-size: cover; background-position: center; height:170px;">
 					<div class="text-center" style="background:rgba(0, 0, 0, 0.7);">
 						<h4 class="text-white">Laptop</h4>
 					</div>
 				</a>
-				<a href='inputNomor.php?jenis_barang=proyektor' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman/src/img/proyektor.jpg'); background-size: cover; background-position: center; height:170px;">
+				<a href='inputNomor.php?jenis_barang=proyektor' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman-barang/src/img/proyektor.jpg'); background-size: cover; background-position: center; height:170px;">
 					<div class="text-center" style="background:rgba(0, 0, 0, 0.7);">
 						<h4 class="text-white">Proyektor</h4>
 					</div>

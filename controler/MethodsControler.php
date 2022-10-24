@@ -22,7 +22,7 @@ class MethodsControler extends MethodsModel
 		// echo $_SESSION['status'];
 		// die();
 		if ($loginSuccesful) {
-			header('Location: /peminjaman/');
+			header('Location: /peminjaman-barang/view/');
 		}else{
 			return $error = [
 				"message" => "Akun tidak ditemukan silahkan periksa nis atau password anda"
@@ -47,10 +47,8 @@ class MethodsControler extends MethodsModel
 	{
 		$isInsert = $this->methods->InsertDataPeminjamanBarang($dataPeminjaman);
 
-		if ($isInsert) {
-			$authenticate->logout();
-		}
-		return $isInsert;
+			return $authenticate->logout();
+		
 	}
 
 

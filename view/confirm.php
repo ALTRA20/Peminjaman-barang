@@ -1,11 +1,10 @@
 <?php include '../controler/MethodsControler.php' ?>
 <?php 
 	session_start();
-	echo $_SESSION['status'];
     if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
         "";
     }else{
-        header("location:/peminjaman/auth/login.php");
+        header("location:/peminjaman-barang/auth/login.php");
     }
 // echo $_SESSION['role'];
 ?>
@@ -73,13 +72,13 @@
 					</form>
 					
 					<?php if ($typeOfItems==="kamera") : ?>
-					 	<a href='/peminjaman/view/inputNomor.php?jenis_barang=kamera' class='btn btn-lg btn-danger mt-4'>Kembali</a>
+					 	<a href='/peminjaman-barang/view/inputNomor.php?jenis_barang=kamera' class='btn btn-lg btn-danger mt-4'>Kembali</a>
 					<?php endif; ?>
 					<?php if ($typeOfItems==="laptop") :  ?>
-					 	<a href='/peminjaman/view/inputNomor.php?jenis_barang=laptop' class='btn btn-lg btn-danger mt-4'>Kembali</a>
+					 	<a href='/peminjaman-barang/view/inputNomor.php?jenis_barang=laptop' class='btn btn-lg btn-danger mt-4'>Kembali</a>
 					<?php endif; ?>
 					<?php if ($typeOfItems==="proyektor") :  ?>
-					 	<a href='/peminjaman/view/inputNomor.php?jenis_barang=proyektor' class='btn btn-lg btn-danger mt-4'>Kembali</a>
+					 	<a href='/peminjaman-barang/view/inputNomor.php?jenis_barang=proyektor' class='btn btn-lg btn-danger mt-4'>Kembali</a>
 					<?php endif; ?>
 				</div>
 			</section>
@@ -96,9 +95,8 @@
 //insert data
 if (isset($_POST['konfirmasi'])) {
 	$_POST['jenis_barang']=$typeOfItems;
-	// echo $typeOfItems;
 	 $methodsControler->insertDataPeminjaman($_POST);
-	 header('Location: /peminjaman');
+	 header('Location: /peminjaman-barang/auth/login.php');
 }
 
  ?>

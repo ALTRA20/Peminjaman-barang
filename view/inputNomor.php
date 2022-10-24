@@ -23,7 +23,7 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
  ?>
 	
 	<section class="row p-5">
-		<div class="col " style="background:url('/peminjaman/src/img/<?= $jenisBarang ?>.jpg'); background-size: cover; background-position: center; height:600px;"></div>
+		<div class="col " style="background:url('/peminjaman-barang/src/img/<?= $jenisBarang ?>.jpg'); background-size: cover; background-position: center; height:600px;"></div>
 		<div class="col d-flex justify-content-center align-items-center">
 		 	<form class="me-1" method="" action="confirm.php" role="search" style="width:inherit; height: fit-content;">
 		 		<input type="hidden" name="jenis_barang" class="form-control" value="<?= $jenisBarang ?>">
@@ -32,6 +32,6 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
 		 	</form>
 		</div>
 	</section>
-	<a href="/peminjaman/view" class="btn btn-lg btn-warning fs-2 my-2" style="width:100%">Home</a>
+	<a href="/peminjaman-barang/view" class="btn btn-lg btn-warning fs-2 my-2" style="width:100%">Home</a>
 </body>
 </html>
