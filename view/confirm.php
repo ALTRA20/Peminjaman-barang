@@ -42,7 +42,7 @@
 					<div>
 						<i class="text-danger">*INFORMASI LAPTOP</i>
 						<div class="d-flex mt-1">
-							<div class="" style="background:url('/fasilitas_sekolah/src/img/<?= $item->img ?>'); background-size: cover; background-position: center; width: 70px; height:60px;"></div>
+							<div class="" style="background:url('/peminjaman-barang/src/img/<?= $item->img ?>'); background-size: cover; background-position: center; width: 70px; height:60px;"></div>
 							<div>
 								<p class="m-0 ms-2"><b class="me-1" style="">Merk laptop : </b> <?= $item->merk ?></p>
 					 			<p class="m-0 ms-2"><b class="me-1" style="">Seri laptop : </b> <?= $item->seri ?></p>
