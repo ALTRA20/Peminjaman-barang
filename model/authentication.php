@@ -41,7 +41,7 @@ class Authentication
 
 	public function logout()
 	{
-		session_destroy();
+		return session_destroy();
 	}
 
 	public function register($datas)

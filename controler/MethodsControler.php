@@ -30,6 +30,11 @@ class MethodsControler extends MethodsModel
 		}
 	}
 
+	public function logout()
+	{
+		$this->authenticate->logout();
+	}
+
 	public function insertDataPeminjaman($dataPeminjaman)
 	{
 		$isInsert = $this->methods->InsertDataPeminjamanBarang($dataPeminjaman);

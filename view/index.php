@@ -26,7 +26,7 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
 			    </form>
 			</div>
 			<div class="d-flex flex-column flex-column-reverse align-items-center" style="height:29em;">
-				<form class="border border-success rounded-pill text-center bg-danger" action="a">
+				<form class="border border-success rounded-pill text-center bg-danger" action="/peminjaman-barang/auth/logout.php">
 					<button class="bg-transparent border-0 text-white px-5 py-3" style="">Logout</button>
 				</form>
 				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
