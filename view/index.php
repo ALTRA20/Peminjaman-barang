@@ -1,7 +1,6 @@
 <?php include '../controler/MethodsControler.php' ?>
 <?php 
 session_start();
-// echo $_SESSION['status'];
 if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
         "";
     }else{
@@ -32,18 +31,6 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
 				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
 					<a href='kamera/' class="text-decoration-none">Bantuan</a>
 				</div>
-				<!-- <div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
-					<a href='?merk="asus"'>Asus</a>
-				</div>
-				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
-					<a href='?merk="lenovo"'>Lenovo</a>
-				</div>
-				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
-					<a href='?merk="fujitsu"'>Fujitsu</a>
-				</div>
-				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
-					<a href='?$_REQUEST["merk"]=null'>Semua</a>
-				</div> -->
 			</div>
 		</div>
 		<div class="col-10 ">

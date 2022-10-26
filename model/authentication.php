@@ -14,10 +14,7 @@ class Authentication
 		session_start();
 		$nis = $inputanLogin['nis'];
 		$password = md5($inputanLogin['password']);
-		// var_dump($password == "2330e4c5087459389f627810a4fa2d36");
 		$this->query = $this->database->query("SELECT * FROM `user` WHERE `NIS`='$nis' AND `password`='$password'");
-		// echo $this->query->num_rows;
-		// die();
 
 		//cek apakah data query ada atau tidak
 		//jika data ada :
@@ -60,15 +57,6 @@ class Authentication
 
 
 $Authentication = new Authentication();
-// echo "alo";
-// $data['nis'] = 7666;
-// $data['password'] = md5("aldo 124");
-// $data['nama_ibu_kandung'] = "manusia";
-// // $query = $auth->login($data);
-// $auth->register($data);
-// echo $_SESSION['nis'];
-
-
 
 
  ?>

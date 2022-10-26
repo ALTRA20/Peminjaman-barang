@@ -6,7 +6,6 @@
     }else{
         header("location:/peminjaman-barang/auth/login.php");
     }
-// echo $_SESSION['role'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +24,6 @@
 	$findStudentByNis = $methodsControler->getWhereNis('siswa', $nis);
 
 	$someoneBorrowed = $findLoanDataBytypeOfItemsAndNumber->num_rows > 0;
-	// var_dump($findItemByNumber);
 	$itemAvailable = $findItemByNumber->num_rows > 0;
  ?>
 <?php if ($someoneBorrowed) : ?>
