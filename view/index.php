@@ -24,16 +24,20 @@ if (isset($_SESSION['status']) && isset($_SESSION['nis'])) {
 			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 			    </form>
 			</div>
-			<div class="d-flex flex-column flex-column-reverse align-items-center" style="height:29em;">
+			<div class="col-12 mt-5" style="">
+				<img src="/peminjaman-barang/src/img/logoYappi.png" alt="" class="" style="width: inherit;">
+			</div>
+			<div class="d-flex flex-column flex-column-reverse align-items-center" style="height:24em;">
 				<form class="border border-success rounded-pill text-center bg-danger" action="/peminjaman-barang/auth/logout.php">
 					<button class="bg-transparent border-0 text-white px-5 py-3" style="">Logout</button>
 				</form>
-				<div class="border border-success rounded-pill text-center my-2 px-5 py-1" style="">
-					<a href='kamera/' class="text-decoration-none">Bantuan</a>
+				<div class="border border-success bg-warning rounded-pill text-center my-2 px-5 py-1" style="">
+					<a href='/peminjaman-barang/bantuan/' class="text-decoration-none text-dark">Bantuan</a>
 				</div>
 			</div>
 		</div>
 		<div class="col-10 ">
+		<I><h1 class="text-white text-center">PEMINJAMAN BARANG SMK YAPPI WONOSARI</h1></I>
 			<div class="row d-flex justify-content-center align-items-center" style="height: 100%;">
 				<a href='inputNomor.php?jenis_barang=kamera' class="col-2 d-flex flex-column-reverse p-0 my-2 mx-3" style="background:url('/peminjaman-barang/src/img/Kamera.jpg'); background-size: cover; background-position: center; height:170px;">
 					<div class="text-center" style="background:rgba(0, 0, 0, 0.7);">

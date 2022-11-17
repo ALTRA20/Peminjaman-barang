@@ -18,14 +18,44 @@ class MethodsControler extends MethodsModel
 	{
 		$login = $this->authenticate->login($inputanLogin);
 		$loginSuccesful = $login != null;
-		// var_dump($login==null);
-		// echo $_SESSION['status'];
-		// die();
 		if ($loginSuccesful) {
 			header('Location: /peminjaman-barang/view/');
 		}else{
 			return $error = [
-				"message" => "Akun tidak ditemukan silahkan periksa nis atau password anda"
+				"errorMassage" => "Akun tidak ditemukan silahkan periksa nis atau password anda"
+			];
+		}
+	}
+
+	public function confirmAccount($dataConfirmationAccount)
+	{
+		$checkAccount = $this->authenticate->confirmAccount($dataConfirmationAccount);
+		$checkAccountSucces = $checkAccount != null;
+		if ($checkAccountSucces) {
+			header('Location: /peminjaman-barang/auth/forgotPassword.php');
+		}else{
+			return $error = [
+				"message" => "Akun tidak ditemukan silahkan periksa nis atau nama ibu kandung anda"
+			];
+		}
+	}
+
+	public function newPassword($newPassword)
+	{
+		$newPasswordHash = md5($newPassword['newPassword']);
+		$confirmNewPasswordHash = md5($newPassword['confirmNewPassword']);
+		if ($newPasswordHash == $confirmNewPasswordHash) {
+			$cekPassword = $this->authenticate->newPassword($newPasswordHash);
+			if(isset($cekPassword['errorMassage'])){
+				return $error = [
+					'errorMassage' => $cekPassword['errorMassage']
+				];
+			}else{
+				header('Location: /peminjaman-barang/auth/login.php');
+			}
+		}else{
+			return $error = [
+				"message" => "Password yang anda masukkan berbeda"
 			];
 		}
 	}
@@ -43,8 +73,6 @@ class MethodsControler extends MethodsModel
 
 	public function findItemsByNumberItems($table, $number)
 	{
-		// echo $number;
-		// die();
 		return $barang = $this->methods->findItemsByNumberItems($table, $number);
 	}
 

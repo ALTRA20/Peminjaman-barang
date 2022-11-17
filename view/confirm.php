@@ -27,8 +27,9 @@
 	$itemAvailable = $findItemByNumber->num_rows > 0;
  ?>
 <?php if ($someoneBorrowed) : ?>
-	<div class="d-flex justify-content-center align-items-center">
+	<div class="text-center" style="height:670px;">
 		<h3 class="text-danger"><?= $typeOfItems ?> nomor <?= $number ?> Sedang Dipinjam</h3>
+		<a href="/peminjaman-barang/view" class="btn btn-warning btn-lg">Home</a>
 	</div>
 <?php else: ?>
 	<?php if ($itemAvailable) : ?>
@@ -83,8 +84,9 @@
 			<?php endwhile; ?>
 		<?php endwhile; ?>
 	<?php else: ?>
-		<div class="d-flex justify-content-center align-items-center">
+		<div class="text-center">
 			<h3 class="text-danger">Barang Sedang Tidak Ditemukan</h3>
+			<a href="/peminjaman-barang/view" class="btn btn-warning btn-lg">Home</a>
 		</div>
 	<?php endif ?>
 <?php endif ?>
